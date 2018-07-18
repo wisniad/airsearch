@@ -44,7 +44,7 @@ export default {
   watch: {
     search: function (val) {
       if (val.length > 0) {
-        axios.get(`https://app.airhelp.com/api/airports?with_metropolitan_areas=false&q= ${val}`)
+        axios.get(`https://cors.io/?https://app.airhelp.com/api/airports?with_metropolitan_areas=false&q=${val}`)
           .then((response) => {
             this.airports = []
             response.data.airports.map(airport => {
